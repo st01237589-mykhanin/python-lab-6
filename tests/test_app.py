@@ -6,3 +6,7 @@ def test_add_simple():
 
 def test_add_negative():
     assert add(-1, -1) == -2
+
+def test_add_zero():
+    assert add(0, 5) == 5
+    assert add(5, 0) == 5
