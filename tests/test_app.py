@@ -21,3 +21,7 @@ def test_add_zero():
 ])
 def test_is_even(value, expected):
     assert is_even(value) == expected
+
+@pytest.fixture
+def sample_numbers():
+    return [2, 4, 6, 8, 10]
