@@ -10,3 +10,14 @@ def test_add_negative():
 def test_add_zero():
     assert add(0, 5) == 5
     assert add(5, 0) == 5
+
+@pytest.mark.parametrize("value, expected", [
+    (2, True),
+    (3, False),
+    (0, True),
+    (-4, True),
+    (-5, False),
+    (100, True),
+])
+def test_is_even(value, expected):
+    assert is_even(value) == expected
